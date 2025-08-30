@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      [postgrest]
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - node_modules_frontend:/app/node_modules
+    command: npm run dev --host
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped    
+
+  db:
+    image: postgres:16
+    container_name: app-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: appdb
+    ports:
+      - "5432:5432"      
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d appdb"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  postgrest:
+    image: postgrest/postgrest:v12.0.2
+    container_name: app-postgrest
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGRST_DB_URI: postgres://postgres:postgres@db:5432/appdb
+      PGRST_DB_SCHEMA: public
+      PGRST_DB_ANON_ROLE: web_anon
+      PGRST_CORS_ALLOW_ORIGIN: "*"
+      PGRST_LOG_LEVEL: info
+    ports:
+      - "3000:3000"
+
+volumes:
+  node_modules_frontend:
+  pgdata:

@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.db-row {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.db-cell {
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-cell input,
+.db-cell select {
+  height: auto;
+}
+
+.db-cell textarea {
+  height: auto;
+  min-height: 21px;
+  resize: none;
+}
+
+.db-cell,
+.db-cell * {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.db-x-scroll::-webkit-scrollbar {
+  height: 0px;
+}
+
+.db-x-scroll {
+  scrollbar-width: none;
+  overflow-y: visible;
+  overflow-x: visible;
+  position: relative;
+}
+.db-toolbar .db-toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 360px) {
+  .db-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .db-toolbar-spacer {
+    display: none;
+  }
+}
+
+.db-list-outer {
+  scrollbar-width: 10px;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: auto;
+  scrollbar-color: auto transparent;  
+}
+
+.db-list-outer::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.db-list-outer::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 9999px;
+}

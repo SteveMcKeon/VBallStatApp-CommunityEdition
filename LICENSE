@@ -1,0 +1,44 @@
+VBallStatApp — Community Edition
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+
+Copyright (C) 2025 Stephen McKeon
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+---
+
+# How to Apply These Terms to Your Program
+
+To apply the AGPL-3.0-or-later to your files, add the following header
+to each source file, replacing <YEAR> and <AUTHOR> as appropriate:
+
+    SPDX-License-Identifier: AGPL-3.0-or-later
+    Copyright (C) <YEAR> <AUTHOR>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Note: For full license text, see the official copy at
+https://www.gnu.org/licenses/agpl-3.0.txt
