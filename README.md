@@ -2,7 +2,7 @@
 
 > **Community Edition (local-only).** This build runs entirely on your machine. Your videos and data stay local; there’s no cloud backend, account, or sync. Demo content streams from the CDN, but your own games play from local files.
 
-A local-first volleyball stats + video review app. Register games, seed timestamp rows, edit stats inline, and scrub video with rally-aware controls. You can click any row in the stats table to jump the video to that moment, and in **Edit Mode** you can work the table entirely from the keyboard—just like Excel.
+A local-first volleyball stats + video review app. Register games, seed timestamp rows, edit stats inline, and scrub video with rally-aware controls. You can click any row in the stats table to jump the video to that moment, and in **Edit Mode** you can work the table entirely from the keyboard, just like Excel.
 
 ### Looking for the full service?
 
